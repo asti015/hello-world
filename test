@@ -1,0 +1,42 @@
+2016-03-15 16:15:51,322 WARN (JSK) mux request dispatch kiwiplan.tss.integration.TSSIntegrationServiceImpl - The service cannot clear 'Due to ship' time for the jobs: 1819143, 1819145, 1819109, 1815675
+2016-03-15 16:15:51,323 INFO (JSK) mux request dispatch kiwiplan.tss.integration.TSSIntegrationServiceImpl - Running the pcs scheduler via script.
+2016-03-15 16:15:51,327 INFO (JSK) mux request dispatch kiwiplan.utils.shell.ShellProcess - plnmenu[33] started.
+2016-03-15 16:15:52,044 INFO plnmenu[33]:Monitor kiwiplan.utils.shell.ShellProcess - plnmenu[33] finished (exit status 134)
+2016-03-15 16:15:52,046 ERROR (JSK) mux request dispatch kiwiplan.tss.integration.TSSIntegrationServiceImpl - Fail to run pcs scheduling script
+kiwiplan.tss.scheduling.PcsScriptException: A problem was encountered while running pcs script. Please contact Kiwiplan Support.
+	at kiwiplan.tss.console.schedule.PcsSchedulingScript.runScript(PcsSchedulingScript.java:153)
+	at kiwiplan.tss.integration.TSSIntegrationServiceImpl.runPcsScheduler(TSSIntegrationServiceImpl.java:1758)
+	at kiwiplan.tss.integration.TSSIntegrationServiceImpl.runPcsTssScheduler(TSSIntegrationServiceImpl.java:1612)
+	at sun.reflect.GeneratedMethodAccessor543.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at kiwiplan.jini.utils.service.DynamicServerUtils.invokeServerMethod(DynamicServerUtils.java:114)
+	at kiwiplan.jini.utils.service.DynamicServerImpl.invokeMethod(DynamicServerImpl.java:188)
+	at sun.reflect.GeneratedMethodAccessor48.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.jini.jeri.BasicInvocationDispatcher.invoke(BasicInvocationDispatcher.java:1126)
+	at net.jini.jeri.BasicInvocationDispatcher.dispatch(BasicInvocationDispatcher.java:608)
+	at com.sun.jini.jeri.internal.runtime.ObjectTable$6.run(ObjectTable.java:597)
+	at net.jini.export.ServerContext.doWithServerContext(ServerContext.java:103)
+	at com.sun.jini.jeri.internal.runtime.ObjectTable$Target.dispatch0(ObjectTable.java:595)
+	at com.sun.jini.jeri.internal.runtime.ObjectTable$Target.access$700(ObjectTable.java:212)
+	at com.sun.jini.jeri.internal.runtime.ObjectTable$5.run(ObjectTable.java:568)
+	at com.sun.jini.start.AggregatePolicyProvider$6.run(AggregatePolicyProvider.java:527)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.jini.jeri.internal.runtime.ObjectTable$Target.dispatch(ObjectTable.java:565)
+	at com.sun.jini.jeri.internal.runtime.ObjectTable$Target.dispatch(ObjectTable.java:540)
+	at com.sun.jini.jeri.internal.runtime.ObjectTable$RD.dispatch(ObjectTable.java:778)
+	at net.jini.jeri.connection.ServerConnectionManager$Dispatcher.dispatch(ServerConnectionManager.java:148)
+	at com.sun.jini.jeri.internal.mux.MuxServer$2.run(MuxServer.java:244)
+	at com.sun.jini.start.AggregatePolicyProvider$5.run(AggregatePolicyProvider.java:513)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.jini.jeri.internal.mux.MuxServer$1.run(MuxServer.java:241)
+	at com.sun.jini.thread.ThreadPool$Worker.run(ThreadPool.java:136)
+	at java.lang.Thread.run(Unknown Source)
+2016-03-15 16:15:52,047 INFO (JSK) mux request dispatch kiwiplan.tss.integration.TSSIntegrationServiceImpl - Performing reconciliation
+2016-03-15 16:15:52,047 INFO (JSK) mux request dispatch kiwiplan.tss.integration.reconciliation.PlantReconciliationManager - Performing plant based reconciliation with Manufacturing Service.
+2016-03-15 16:15:52,047 INFO (JSK) mux request dispatch kiwiplan.tss.integration.reconciliation.PlantReconciliationManager - Retrieving legacy plant data.
+2016-03-15 16:15:52,091 INFO (JSK) mux request dispatch kiwiplan.tss.integration.reconciliation.PlantReconciliationManager - Retrieving legacy store data for plant: Name: MIDCORR
+Legacy Plant Number: 1
+
